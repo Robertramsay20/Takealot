@@ -13,7 +13,7 @@ namespace Takealot
 
             // Variable
 
-            string TextSearch = ("Five Star 5KVA, PWM 48V Solar Hybrid Inverter");
+            string TextSearch = ("FIVESTAR 48V 10KVA 10KW Hybrid Solar Inverter MPPT WIFI COMPATIBLE");
 
             // ChromeDriver Setup
 
@@ -35,12 +35,12 @@ namespace Takealot
 
             // Click Search
 
-            driver.FindElement(By.XPath("//*[@id=\"shopfront-app\"]/header/div/div/div[2]/form/div/div[3]/button")).Click();
+            driver.FindElement(By.XPath("//*[@id=\"shopfront-app\"]/header/div/div/div[2]/form/div[1]/div[2]/button")).Click();
             Thread.Sleep(2000);
 
             // Click Add to Cart on First Search Result
 
-            driver.FindElement(By.XPath("//*[@id=\"91362013\"]/div/div[4]/div/button")).Click();
+            driver.FindElement(By.XPath("//*[@id=\"91127643\"]/div/div[4]/div/button")).Click();
             Thread.Sleep(2000);
 
             // Click on Cart Icon
@@ -51,7 +51,7 @@ namespace Takealot
             // Grab Text to Assert against expected values
 
             string headingText = driver.FindElement(By.XPath("//*[@id=\"shopfront-app\"]/div[3]/div[2]/section/div[2]/div[1]/div[1]/div/div/article/div/div/div[3]/div/div[1]/div/div[1]/div[1]/div/a/h3")).Text;
-            string checkoutButton = driver.FindElement(By.XPath("//*[@id=\"shopfront-app\"]/div[3]/div[2]/section/div[2]/div[2]/div/div[1]/div[1]/div/div[2]/a")).Text;
+            string checkoutButton = driver.FindElement(By.XPath("//*[@id=\"shopfront-app\"]/div[3]/div[2]/section/div[2]/div[2]/div/div[1]/div[3]/div/div[2]/a")).Text;
 
             // Assertions
 
